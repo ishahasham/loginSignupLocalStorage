@@ -4,6 +4,7 @@ import './App.css';
 import Login from './Screens/Login/Login';
 import Signup from './Screens/Signup/Signup';
 import Dashboard from './Screens/Dashboard/Dashboard'; 
+import Products from './Screens/Products/Products';
 
 function App() {
   const handleFormSubmit = (e, navigate) => {
@@ -41,6 +42,7 @@ function App() {
           <Route path="/login" element={<LoginForm onSubmit={handleFormSubmit} />} />
           <Route path="/signup" element={<SignupForm onSubmit={handleFormSubmit} />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/products/:id" element={<Products/>} />
           <Route path="/" element={<LoginForm onSubmit={handleFormSubmit} />} />
         </Routes>
       </div>
